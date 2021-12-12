@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số chiều cao, cân nặng</title>
+</head>
+<body>
+<h2>Tính chiều cao và cân nặng</h2>
+<input type="number" id="cannang" placeholder="Nhập cân nặng" value="">
+<input type="number" id="chieucao" placeholder="Nhập chiều cao" value="">
+<button onclick="number()">OK</button>
+<p id="ketqua"></p>
+</body>
+</html>
+<script>
+    function number(){
+        let weight = document.getElementById("cannang").value;
+        let height = document.getElementById("chieucao").value;
+        let ketqua = weight / (height * height);
+        if (ketqua < 18) {
+            document.getElementById("ketqua").innerHTML = "Underweight"
+        } else if (ketqua < 25.0) {
+            document.getElementById("ketqua").innerHTML = "Normal"
+        } else if (ketqua < 30.0) {
+            document.getElementById("ketqua").innerHTML = "Overweight"
+        } else if (ketqua < 18) {
+            document.getElementById("ketqua").innerHTML = "Obese"
+        }
+    }
+
+</script>
